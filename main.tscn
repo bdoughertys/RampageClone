@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://b617vf0t6au54"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_rmid1"]
+
+[sub_resource type="GDScript" id="GDScript_36vda"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rmid1")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 56.0
+offset_right = 144.0
+offset_bottom = 48.0
+tooltip_text = "Play button"
+text = "Rampage"
+icon_alignment = 1
+script = SubResource("GDScript_36vda")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 56.0
+offset_top = 53.0
+offset_right = 144.0
+offset_bottom = 100.0
+tooltip_text = "Quit button"
+text = "Flee (Quit)"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
